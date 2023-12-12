@@ -1,9 +1,11 @@
 package Teste;
 
+import ObjectData.AlertObject;
 import Pages.AlertFrameWindow.AlertFrameWindowPage;
 import Pages.AlertFrameWindow.AlertPage;
 import Pages.HomePage;
 import ShareData.ShareData;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 public class AlertTest extends ShareData {
@@ -11,9 +13,13 @@ public class AlertTest extends ShareData {
     @Test
     public void testmethod() {
 
+        AlertObject alertObject = new AlertObject()(testData);
 
         HomePage homePage = new HomePage(getDriver());
         homePage.clickalertframewindow();
+
+        JavascriptExecutor JS = (JavascriptExecutor) getDriver();
+        JS.executeScript("window.scrollBy(0,350)","");
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
         alertFrameWindowPage.clickAlerts();
@@ -24,9 +30,6 @@ public class AlertTest extends ShareData {
         alertPage.interractalertdelay();
         alertPage.interractalertdismiss();
         alertPage.interractalertvalue("Text");
-
-
-
 
 
 

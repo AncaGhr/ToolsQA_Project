@@ -1,18 +1,21 @@
 package Teste;
 
+import ObjectData.FormTableObject;
 import Pages.HomePage;
 import Pages.Forms.FormsPage;
 import Pages.Forms.PracticeFormsPage;
 import ShareData.ShareData;
 import org.testng.annotations.Test;
-
+import ShareData.Hooks;
 import java.util.List;
 
-public class FormTableTest extends ShareData {
+public class FormTableTest extends Hooks {
 
     @Test
 
     public void testmethod() {
+
+        FormTableObject formTableObject = new FormTableObject(testData);
 
         HomePage homePage = new HomePage(getDriver());
         homePage.clickforms();
@@ -20,20 +23,19 @@ public class FormTableTest extends ShareData {
         FormsPage formsPage = new FormsPage(getDriver());
         formsPage.clickPracticeForm();
 
-        String firstnamevalue = "Anca";
-        String lastnamevalue = "Ghr";
-        String emailadress = "anca@example.com";
-        String mobilevalue = "0720100200";
-        String subjectsvalue = "English";
-        String adressvalue = "Str. X, Nr. Y";
-        String statevalue = "NCR";
-        String cityvalue = "Delhi";
-        String expectedmessage = "Thanks for submitting the form";
+//        String firstnamevalue = "Anca";
+//        String lastnamevalue = "Ghr";
+//        String emailadress = "anca@example.com";
+//        String mobilevalue = "0720100200";
+//        String subjectsvalue = "English";
+//        String adressvalue = "Str. X, Nr. Y";
+//        String statevalue = "NCR";
+//        String cityvalue = "Delhi";
+//        String expectedmessage = "Thanks for submitting the form";
 
 
         PracticeFormsPage practiceFormsPage = new PracticeFormsPage(getDriver());
-        practiceFormsPage.fillPracticeForm(firstnamevalue, lastnamevalue, emailadress, mobilevalue,
-                subjectsvalue, adressvalue, statevalue, cityvalue);
+        practiceFormsPage.fillPracticeForm(formTableObject);
 
         List<String> formValues = practiceFormsPage.getValuesForms();
         practiceFormsPage.fillsubmit();

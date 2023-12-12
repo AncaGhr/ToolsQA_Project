@@ -13,7 +13,7 @@ public class ShareData {
     private WebDriver driver;
 
 
-    @BeforeMethod
+//    @BeforeMethod
     public void setup(){
 
         driver = new ChromeDriver();
@@ -26,7 +26,7 @@ public class ShareData {
         jse.executeScript("window.scrollBy(0,350)");
     }
 
-   @AfterMethod
+//   @AfterMethod
     public void clear(){
         driver.quit();
     }
