@@ -23,8 +23,6 @@ public class FramePage extends BasePage {
     @FindBy(id = "sampleHeading")
     private WebElement frametext;
 
-
-
     public void interractfirstiframe(){
         frameMethods.switchToFrame("frame1");
         System.out.println(frametext.getText());
@@ -35,6 +33,4 @@ public class FramePage extends BasePage {
         frameMethods.switchToFrame("frame2");
         System.out.println(frametext.getText());
     }
-
-
 }

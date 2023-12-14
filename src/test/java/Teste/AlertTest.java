@@ -4,11 +4,11 @@ import ObjectData.AlertObject;
 import Pages.AlertFrameWindow.AlertFrameWindowPage;
 import Pages.AlertFrameWindow.AlertPage;
 import Pages.HomePage;
-import ShareData.ShareData;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
+import ShareData.Hooks;
 
-public class AlertTest extends ShareData {
+public class AlertTest extends Hooks {
 
     @Test
     public void testmethod() {
@@ -30,8 +30,6 @@ public class AlertTest extends ShareData {
         alertPage.interractalertdelay();
         alertPage.interractalertdismiss();
         alertPage.interractalertvalue("Text");
-
-
 
 
 

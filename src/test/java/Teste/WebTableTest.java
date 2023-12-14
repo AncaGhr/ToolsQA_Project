@@ -3,10 +3,10 @@ package Teste;
 import Pages.Elements.ElementsPage;
 import Pages.HomePage;
 import Pages.Elements.WebTablePage;
-import ShareData.ShareData;
+import ShareData.Hooks;
 import org.testng.annotations.Test;
 
-public class WebTableTest extends ShareData {
+public class WebTableTest extends Hooks {
 
 
     @Test
