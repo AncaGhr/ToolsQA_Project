@@ -34,6 +34,6 @@ public class PropertyUtility {
         for(String Key: properties.stringPropertyNames()){ // parcurge toate cheile din proprietate
           testData.put(Key,properties.getProperty(Key)); // adaug cheie valoare in HashMap de mai sus
         }
-        return testData;
+        return testData; //returnam colectia
     }
 }

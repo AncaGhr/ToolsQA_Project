@@ -5,28 +5,32 @@ import Pages.AlertFrameWindow.FramePage;
 import Pages.HomePage;
 import ShareData.ShareData;
 import org.testng.annotations.Test;
+import ShareData.Hooks;
 
-public class FrameTest extends  ShareData {
+public class FrameTest extends Hooks {
 
     @Test
 
     public void testmethod() {
 
-//        WebElement alertsframewindow = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-//        alertsframewindow.click();
-
         HomePage homePage = new HomePage(getDriver());
         homePage.clickalertframewindow();
-
-//        WebElement frames = driver.findElement(By.xpath("//span[text()='Frames']"));
-//        frames.click();
 
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
         alertFrameWindowPage.clickFrames();
+
         FramePage framePage = new FramePage(getDriver());
-        framePage.interractfirstiframe();
-        framePage.interractsecondiframe();
+        framePage.interractFirstIFrame();
+        framePage.interractSecondIFrame();
+
+
+
+        //        WebElement alertsframewindow = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+//        alertsframewindow.click();
+
+//        WebElement frames = driver.findElement(By.xpath("//span[text()='Frames']"));
+//        frames.click();
 
 //        driver.switchTo().frame("frame1");
 //
@@ -41,10 +45,5 @@ public class FrameTest extends  ShareData {
 //        System.out.println(frame2text.getText());
 
     }
-
-
-
-
-
 
 }

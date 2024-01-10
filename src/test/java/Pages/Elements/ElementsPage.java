@@ -1,5 +1,6 @@
 package Pages.Elements;
 
+import Logger.LoggerUtility;
 import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,22 +13,14 @@ public class ElementsPage extends BasePage {
         super(driver);
     }
 
-
-//    public WebDriver driver;
-
-//    public ElementsPage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver,this);
-//    }
-
     @FindBy(xpath = "//span[text()='Web Tables']")
     private WebElement webtables;
 
+    public void clickWebTables(){
 
-
-    public void clickwebtables(){
         webtables.click();
-    }
+        LoggerUtility.info("The user clicks on webtables element");
 
+    }
 
 }

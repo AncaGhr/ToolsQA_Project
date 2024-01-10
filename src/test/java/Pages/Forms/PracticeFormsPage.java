@@ -1,11 +1,12 @@
 package Pages.Forms;
 
+import Logger.LoggerUtility;
+import ObjectData.FormTableObject;
 import Pages.BasePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -15,6 +16,7 @@ import java.util.List;
 public class PracticeFormsPage extends BasePage {
 
     public PracticeFormsPage(WebDriver driver) {
+
         super(driver);
     }
 
@@ -45,10 +47,10 @@ public class PracticeFormsPage extends BasePage {
     private WebElement subjects;
 
     @FindBy(xpath = "//label[@for='hobbies-checkbox-2']")
-    private WebElement reading;
+    private WebElement hobbies;
 
     @FindBy(id = "uploadPicture")
-    private WebElement choosefile;
+    private WebElement uploadPicture;
 
     @FindBy(id = "currentAddress")
     private WebElement adress;
@@ -66,7 +68,7 @@ public class PracticeFormsPage extends BasePage {
     private WebElement selectcity;
 
     @FindBy(id = "submit")
-    private WebElement submitbutton;
+    private WebElement submit;
 
     @FindBy(id = "example-modal-sizes-title-lg")
     private WebElement thanksmessage;
@@ -79,71 +81,105 @@ public class PracticeFormsPage extends BasePage {
 
 
 
-    public void fillPracticeForm(String firstname, String lastname, String email, String mobile,
-                                 String subjects, String adress, String state, String city) {
-        fillfirstName(firstname);
-        fillLastName(lastname);
-        fillemail(email);
+    public void fillPracticeForm(FormTableObject formTableObject) {
+
+        fillFirstName(formTableObject.getFirstNameValue());
+        fillLastName(formTableObject.getLastNameValue());
+        fillemail(formTableObject.getEmailvalue());
         fillgender();
-        fillmobile(mobile);
-        fillsubjects(subjects);
-        fillreading();
-        filladress(adress);
-        fillstate(state);
-        fillcity(city);
+        fillmobile(formTableObject.getMobilevalue());
+        fillsubjects(formTableObject.getSubjectsvalue());
+        elementMethods.scrollByPixel(0,400);
+        fillhobbies();
+        filladress(formTableObject.getAddressvalue());
+        fillstate(formTableObject.getStatevalue());
+        fillcity(formTableObject.getCityvalue());
+
+
+//        fillfirstName(firstname);
+//        fillLastName(lastname);
+//        fillemail(email);
+//        fillgender();
+//        fillmobile(mobile);
+//        fillsubjects(subjects);
+//        fillreading();
+//        filladress(adress);
+//        fillstate(state);
+//        fillcity(city);
     }
 
     public List<String> getValuesForms() {
         List<String> formValues = new ArrayList<>();
         formValues.add(gender.getText());
-        formValues.add(reading.getText());
+        formValues.add(hobbies.getText());
         return formValues;
     }
-
-    public void fillfirstName(String firstnamevalue) {
-        firstname.sendKeys(firstnamevalue);
+    public void fillFirstName(String firstnamevalue) {
+        elementMethods.fillElement(firstname, firstnamevalue); // nu am castigat linii de cod dar am reusit GENERALIZAREA ACTIUNII
+        LoggerUtility.info("The user fills FirstName with value : " + firstnamevalue);
+        //firstname.sendKeys(firstnamevalue);
     }
 
     public void fillLastName(String lastnamevalue) {
-        lastname.sendKeys(lastnamevalue);
+        elementMethods.fillElement(lastname, lastnamevalue );
+        LoggerUtility.info("The user fills LastName with value : " + lastnamevalue);
+        //lastname.sendKeys(lastnamevalue);
     }
 
     public void fillemail(String emailadress) {
-        email.sendKeys(emailadress);
+        elementMethods.fillElement(email, emailadress);
+        LoggerUtility.info("The user fills email with value : " + emailadress);
+        //email.sendKeys(emailadress);
     }
 
     public void fillgender() {
-        gender.click();
+        elementMethods.clickElement(gender);
+        LoggerUtility.info("The user fills gender with value : " + gender);
+        //gender.click();
     }
 
     public void fillmobile(String mobilevalue) {
-        mobile.sendKeys(mobilevalue);
+        elementMethods.fillElement(mobile, mobilevalue);
+        LoggerUtility.info("The user fills mobile with value : " + mobilevalue);
+        //mobile.sendKeys(mobilevalue);
     }
 
     public void fillsubjects(String subjectsvalue) {
-        elementMethods.fillElement(subjects,subjectsvalue, Keys.ENTER );
-        subjects.sendKeys(subjectsvalue);
-        subjects.sendKeys(Keys.ENTER);
+        elementMethods.fillElement(subjects, subjectsvalue, Keys.ENTER);
+        LoggerUtility.info("The user fills subjects with value: " + subjectsvalue);
+//        subjects.sendKeys(subjectsvalue);
+//        subjects.sendKeys(Keys.ENTER);
     }
 
-    public void fillreading() {
-        reading.click();
+    public void fillhobbies() {
+        elementMethods.clickElement(hobbies);
+        LoggerUtility.info("The user fills hobby with value : " + hobbies);
+//        hobbies.click();
     }
 
-    public void fillfile (){
+
+    public void fillphoto(){
         WebElement choosefile = driver.findElement(By.id("uploadPicture"));
         File file = new File("src/test/resources/Eu color.jpg");
         choosefile.sendKeys(file.getAbsolutePath());
     }
 
     public void filladress(String adressvalue) {
-        adress.sendKeys(adressvalue);
+        elementMethods.fillElement(adress, adressvalue);
+        LoggerUtility.info("The user fills adress with value : " + adressvalue);
+        //adress.sendKeys(adressvalue);
     }
 
     public void fillstate(String statevalue) {
-        elementMethods.scrollByPixel();
-        elementMethods.clickElement((state));
+
+        elementMethods.scrollByPixel(0,450);
+        LoggerUtility.info("The user scrolls down the page ");
+
+        elementMethods.clickJsElement(state);
+        LoggerUtility.info("The user click on state button");
+
         elementMethods.fillElement(selectstate, statevalue, Keys.ENTER);
+        LoggerUtility.info("The user selects the state " + statevalue);
 
 //        JavascriptExecutor jse = (JavascriptExecutor) driver;
 //        jse.executeScript("window.scrollBy(0,350)");
@@ -153,41 +189,59 @@ public class PracticeFormsPage extends BasePage {
     }
 
     public void fillcity(String cityvalue) {
-        city.click();
-        selectcity.sendKeys(cityvalue);
-        selectcity.sendKeys(Keys.ENTER);
+
+        elementMethods.clickJsElement(city);
+        LoggerUtility.info("The user click on city");
+
+        elementMethods.fillElement(selectcity, cityvalue, Keys.ENTER);
+        LoggerUtility.info("The user selects the city: " + cityvalue);
+
+//        city.click();
+//        selectcity.sendKeys(cityvalue);
+//        selectcity.sendKeys(Keys.ENTER);
     }
 
     public void fillsubmit() {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("arguments[0].click();", submitbutton);
+
+        elementMethods.clickJsElement(submit);
+        LoggerUtility.info("The user clicks on submit button: ");
+
+//        JavascriptExecutor jse = (JavascriptExecutor) driver;
+//        jse.executeScript("arguments[0].click();", submit);
+//        LoggerUtility.info("The user clicks on submit button");
     }
 
-    public void clickclose() {
-        closebutton.sendKeys(Keys.ENTER);
+    public void clickClose() {
+
+        elementMethods.fillElement(closebutton, Keys.ENTER); //AICI DE VERIF DACA E OK, AM MAI FACUT O METODA PT WEB ELEMENT SI ENTER
+        LoggerUtility.info("The user clicks on close button: ");
+
+        //closebutton.sendKeys(Keys.ENTER);
+
+        // public void validatePracticeForm(String expectedMessage, String firstnamevalue, String lastnamevalue, String emailvalue,
+//                                     String gendervalue, String mobilevalue, String subjectsvalue, String hobbiesvalue,
+//                                     String addressvalue, String statevalue, String cityvalue){
 
     }
+    public void validatePracticeForm(String expectedMessage, String firstnamevalue, String lastnamevalue, String emailvalue,
+                                     String gendervalue, String mobilevalue, String subjectsvalue, String hobbiesvalue,
+                                     String addressvalue, String statevalue, String cityvalue){
 
-
-    public void validatePracticeForm(String expectedmessage, String firstnamevalue, String lastnamevalue, String emailadress,
-                                     String gendervalue, String mobilevalue, String subjectsvalue, String readingvalue,
-                                     String adressvalue, String statevalue, String cityvalue) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM,yyyy"); // poate fi si Locale.ENGLISH pentru luna intreaga
         LocalDateTime now = LocalDateTime.now();
         String dateofbirthvalue = dtf.format(now);
+        elementMethods.validateElementMessage(thanksmessage,expectedMessage);
 
 
-        WebElement thanksmessage = driver.findElement(By.id("example-modal-sizes-title-lg"));
-
-        String actualmessage = thanksmessage.getText();
-
-        Assert.assertEquals(actualmessage, expectedmessage);
+//        WebElement thanksmessage = driver.findElement(By.id("example-modal-sizes-title-lg"));
+//        String actualmessage = thanksmessage.getText();
+//        Assert.assertEquals(actualmessage, expectedMessage);
 
         Assert.assertTrue(validationtable.get(0).getText().contains("Student Name"));
         Assert.assertTrue(validationtable.get(0).getText().contains(firstnamevalue + " " + lastnamevalue));
 
         Assert.assertTrue(validationtable.get(1).getText().contains("Student Email"));
-        Assert.assertTrue(validationtable.get(1).getText().contains(emailadress));
+        Assert.assertTrue(validationtable.get(1).getText().contains(emailvalue));
 
         Assert.assertTrue(validationtable.get(2).getText().contains("Gender"));
         Assert.assertTrue(validationtable.get(2).getText().contains(gendervalue));
@@ -202,13 +256,13 @@ public class PracticeFormsPage extends BasePage {
         Assert.assertTrue(validationtable.get(5).getText().contains(subjectsvalue));
 
         Assert.assertTrue(validationtable.get(6).getText().contains("Hobbies"));
-        Assert.assertTrue(validationtable.get(6).getText().contains(readingvalue));
+        Assert.assertTrue(validationtable.get(6).getText().contains(hobbiesvalue));
 
 //        Assert.assertTrue(validationtable.get(7).getText().contains("Picture"));
 //        Assert.assertTrue(validationtable.get(7).getText().contains(file.getName()));
 
         Assert.assertTrue(validationtable.get(8).getText().contains("Address"));
-        Assert.assertTrue(validationtable.get(8).getText().contains(adressvalue));
+        Assert.assertTrue(validationtable.get(8).getText().contains(addressvalue));
 
         Assert.assertTrue(validationtable.get(9).getText().contains("State and City"));
         Assert.assertTrue(validationtable.get(9).getText().contains(statevalue + " " + cityvalue));

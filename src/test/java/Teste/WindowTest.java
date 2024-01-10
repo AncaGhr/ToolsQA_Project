@@ -13,21 +13,21 @@ public class WindowTest extends ShareData {
 
     public void testmethod() {
 
-//        WebElement alertsframewindow = getDriver().findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-//        alertsframewindow.click();
-
         HomePage homePage = new HomePage(getDriver());
         homePage.clickalertframewindow();
 
-//        WebElement browserwindows = getDriver().findElement(By.xpath("//span[text()='Browser Windows']"));
-//        browserwindows.click();
-
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
-        alertFrameWindowPage.clickwindows();
+        alertFrameWindowPage.clickWindows();
 
         WindowsPage windowsPage = new WindowsPage(getDriver());
-        windowsPage.interracttab();
-        windowsPage.interractwindow();
+        windowsPage.interractTab();
+        windowsPage.interractWindow();
+
+
+//        WebElement alertsframewindow = getDriver().findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+//        alertsframewindow.click();
+//        WebElement browserwindows = getDriver().findElement(By.xpath("//span[text()='Browser Windows']"));
+//        browserwindows.click();
 
 //        WebElement newtabbutton = getDriver().findElement(By.id("tabButton"));
 //        newtabbutton.click();

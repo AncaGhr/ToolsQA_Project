@@ -13,23 +13,24 @@ public class AlertTest extends Hooks {
     @Test
     public void testmethod() {
 
-        AlertObject alertObject = new AlertObject()(testData);
+        AlertObject alertObject = new AlertObject(testData);
 
         HomePage homePage = new HomePage(getDriver());
         homePage.clickalertframewindow();
-
-        JavascriptExecutor JS = (JavascriptExecutor) getDriver();
-        JS.executeScript("window.scrollBy(0,350)","");
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
         alertFrameWindowPage.clickAlerts();
 
         AlertPage alertPage = new AlertPage(getDriver());
 
-        alertPage.interractalertok();
-        alertPage.interractalertdelay();
-        alertPage.interractalertdismiss();
-        alertPage.interractalertvalue("Text");
+        alertPage.interractAlertOK();
+
+        alertPage.interractAlertDelay();
+
+        alertPage.interractAlertDismiss();
+
+        alertPage.interractAlertValue(alertObject);
+
 
 
 

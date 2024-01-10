@@ -1,9 +1,14 @@
 package Teste;
 
+import ObjectData.FormTableObject;
+import ObjectData.WebTableObject;
 import Pages.Elements.ElementsPage;
+import Pages.Forms.PracticeFormsPage;
 import Pages.HomePage;
 import Pages.Elements.WebTablePage;
+import ShareData.ShareData;
 import ShareData.Hooks;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 public class WebTableTest extends Hooks {
@@ -13,6 +18,29 @@ public class WebTableTest extends Hooks {
 
     public void testmethod(){
 
+        WebTableObject webTableObject = new WebTableObject(testData);
+
+        HomePage homePage = new HomePage(getDriver());
+        homePage.clickElements();
+
+        JavascriptExecutor JS = (JavascriptExecutor) getDriver();
+        JS.executeScript("window.scrollBy(0,450)", "");
+
+        ElementsPage elementsPage = new ElementsPage(getDriver());
+        elementsPage.clickWebTables();
+
+        WebTablePage webTablePage = new WebTablePage(getDriver());
+        webTablePage.addNewEntry(webTableObject);
+
+//        String firstnamevalue = "Anca";
+//        String lastnamevalue = "Ghr";
+//        String emailvalue = "anca@example.com";
+//        String agevalue = "22";
+//        String salaryvalue = "10000";
+//        String departamentvalue = "IT";
+
+//        WebTablePage webTablePage = new WebTablePage(getDriver());
+//        webTablePage.addnewentry(firstnamevalue,lastnamevalue, emailvalue, agevalue, salaryvalue,departamentvalue);
 
 //        WebElement elements = getDriver().findElement(By.xpath("//h5[text()='Elements']"));
 //
@@ -25,24 +53,6 @@ public class WebTableTest extends Hooks {
 //
 //        WebElement webtables = getDriver().findElement(By.xpath("//span[text()='Web Tables']"));
 //        webtables.click();
-
-        HomePage homePage = new HomePage(getDriver());
-        homePage.clickelements();
-
-        ElementsPage elementsPage = new ElementsPage(getDriver());
-        elementsPage.clickwebtables();
-
-        String firstnamevalue = "Anca";
-        String lastnamevalue = "Ghr";
-        String emailvalue = "anca@example.com";
-        String agevalue = "22";
-        String salaryvalue = "10000";
-        String departamentvalue = "IT";
-
-        WebTablePage webTablePage = new WebTablePage(getDriver());
-        webTablePage.addnewentry(firstnamevalue,lastnamevalue, emailvalue, agevalue, salaryvalue,departamentvalue);
-
-
 
 //        List<WebElement> actualentries = getDriver().findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
 //        Integer actualtablesize = actualentries.size();

@@ -1,5 +1,7 @@
 package Pages.AlertFrameWindow;
 
+import Logger.LoggerUtility;
+import ObjectData.AlertObject;
 import Pages.BasePage;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
@@ -25,45 +27,73 @@ public class AlertPage extends BasePage {
 //    }
 
     @FindBy(id = "alertButton")
-    private WebElement alertokbutton;
+    private WebElement alertaOkButton;
 
     @FindBy (id = "timerAlertButton")
-    private WebElement alertdelaybutton;
+    private WebElement alertDelayButton;
 
     @FindBy(id = "confirmButton")
-    private WebElement alertokcancelbutton;
+    private WebElement confirmButton;
 
-    @FindBy(id = "promtButton" )
-    private  WebElement alertvaluebutton;
+    @FindBy(id = "promptButton" )
+    private  WebElement promptButton;
 
 
 
-    public void interractalertok(){
-        alertokbutton.click();
+    public void interractAlertOK(){
+
+        elementMethods.clickElement(alertaOkButton);
+        LoggerUtility.info("The user clicks on alertaOkButton");
+
         alertMethods.acceptAlert();
+        LoggerUtility.info("The user clicks on acceptAlert");
+
+//        alertokbutton.click();
+//        alertMethods.acceptAlert();
 //        Alert alertok = driver.switchTo().alert();
 //        alertok.accept();
     }
 
-    public void interractalertdelay(){
-        alertdelaybutton.click();
+    public void interractAlertDelay(){
+
+        elementMethods.clickElement(alertDelayButton);
+        LoggerUtility.info("The user clicks on alertDelayButton");
+
         alertMethods.acceptAlert();
+        LoggerUtility.info("The user clicks on acceptAlert");
+
+//        alertdelaybutton.click();
+//        alertMethods.acceptAlert();
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // wait explicit trb sa aiba conditie
 //        wait.until(ExpectedConditions.alertIsPresent()); // conditia pt wait explicit
 //        Alert alertdelay = driver.switchTo().alert();
 //        alertdelay.accept();
     }
 
-    public void interractalertdismiss(){
-        alertokcancelbutton.click();
+    public void interractAlertDismiss(){
+
+        elementMethods.clickElement(confirmButton);
+        LoggerUtility.info("The user clicks on confirmButton");
+
         alertMethods.cancelAlert();
+        LoggerUtility.info("The user clicks on cancelAlert");
+
+//        alertokcancelbutton.click();
+//        alertMethods.cancelAlert();
 //        Alert alertokcancel = driver.switchTo().alert();
 //        alertokcancel.dismiss(); // accept = ok si dismiss = cancel
     }
 
-    public void interractalertvalue(String value){
-        alertvaluebutton.click();
-        alertMethods.fillAlert(value);
+    public void interractAlertValue(AlertObject alertObject){
+
+        elementMethods.clickElement(promptButton);
+        LoggerUtility.info("The user clicks on promtButton");
+
+        alertMethods.fillAlert(alertObject.getPromptAlertValue());
+        LoggerUtility.info("The user fills the PromptAlertValue" + promptButton);
+
+//        alertvaluebutton.click();
+//        alertMethods.fillAlert(value);
 //        Alert alertvalue = driver.switchTo().alert();
 //        alertvalue.sendKeys(value);
 //        alertvalue.accept();

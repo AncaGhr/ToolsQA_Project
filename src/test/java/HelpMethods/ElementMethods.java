@@ -1,10 +1,12 @@
 package HelpMethods;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -16,12 +18,12 @@ public class ElementMethods {
         this.driver = driver;
     }
 
-    private void waitVisibleElement(WebElement element){
+    private void waitVisibleElement(WebElement element){ // se foloseste aceasta metoda pentru a determina site-ul  sa astepte sa se incarce elementele din pagina
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void clickElement (WebElement element){
+    public void clickElement(WebElement element){
         waitVisibleElement(element);
         element.click();
     }
@@ -31,22 +33,37 @@ public class ElementMethods {
         element.sendKeys(value);
     }
 
-    public void fillElement(WebElement element, String value, String keyboardPress){
+    public void fillElement(WebElement element, String value, Keys keyboardPress){
         waitVisibleElement(element);
         element.sendKeys(value);
         element.sendKeys(keyboardPress);
     }
 
-    public void scrollByPixel(Integer x, Integer y){
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("window.scrollBy("+x+","+y+")","");
+    public void fillElement(WebElement element, String value, String keyboardPress) {
+        waitVisibleElement(element);
+        element.sendKeys(value);
+        element.sendKeys(keyboardPress);
     }
 
-    public void clickJSElement(WebElement element){
+    public void fillElement(WebElement element, Keys value){
         waitVisibleElement(element);
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("arguments[0]");
+        element.sendKeys(value);
+    }
 
+    public void scrollByPixel(Integer x, Integer y){
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy("+x+","+y+")");
+    }
+
+    public void clickJsElement(WebElement element){
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].click();", element);
+    }
+
+    public void validateElementMessage(WebElement element, String value){
+        waitVisibleElement(element);
+        String actualmessage = element.getText();
+        Assert.assertEquals(actualmessage, value);
     }
 
 }

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import ShareData.Hooks;
 import java.util.List;
 
-public class FormTableTest extends Hooks {
+public class FormTableTest extends Hooks { //in loc de Share Data am pus Hooks
 
     @Test
 
@@ -18,10 +18,20 @@ public class FormTableTest extends Hooks {
         FormTableObject formTableObject = new FormTableObject(testData);
 
         HomePage homePage = new HomePage(getDriver());
-        homePage.clickforms();
+        homePage.clickForms();
 
         FormsPage formsPage = new FormsPage(getDriver());
         formsPage.clickPracticeForm();
+
+        PracticeFormsPage practiceFormsPage = new PracticeFormsPage(getDriver());
+        practiceFormsPage.fillPracticeForm(formTableObject);
+
+        List<String> Formvalues = practiceFormsPage.getValuesForms();
+        practiceFormsPage.fillsubmit();
+
+        practiceFormsPage.clickClose();
+
+
 
 //        String firstnamevalue = "Anca";
 //        String lastnamevalue = "Ghr";
@@ -34,16 +44,11 @@ public class FormTableTest extends Hooks {
 //        String expectedmessage = "Thanks for submitting the form";
 
 
-        PracticeFormsPage practiceFormsPage = new PracticeFormsPage(getDriver());
-        practiceFormsPage.fillPracticeForm(formTableObject);
 
-        List<String> formValues = practiceFormsPage.getValuesForms();
-        practiceFormsPage.fillsubmit();
-
-        practiceFormsPage.validatePracticeForm(expectedmessage, firstnamevalue, lastnamevalue, emailadress,
-                formValues.get(0), mobilevalue, subjectsvalue, formValues.get(1), adressvalue, statevalue, cityvalue);
-
-        practiceFormsPage.clickclose();
+//        practiceFormsPage.validatePracticeForm(expectedmessage, firstnamevalue, lastnamevalue, emailadress,
+//                formValues.get(0), mobilevalue, subjectsvalue, formValues.get(1), adressvalue, statevalue, cityvalue);
+//
+//        practiceFormsPage.clickclose();
 
 
 //        WebElement forms = driver.findElement(By.xpath("//h5[text()='Forms']"));

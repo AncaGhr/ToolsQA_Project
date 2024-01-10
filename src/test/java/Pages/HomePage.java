@@ -1,5 +1,6 @@
 package Pages;
 
+import Logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,18 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
+
         super(driver);
     }
 
-//    public WebDriver driver;
-//
-//    public HomePage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver,this);
-//    }
-
     @FindBy(xpath = "//h5[text()='Alerts, Frame & Windows']") // da posibilitatea sa imi gaseasca elem. dupa xpath
-    private WebElement alertsframewindow;
+    private WebElement alertsFrameWindow;
 
     @FindBy(xpath = "//h5[text()='Forms']")
     private WebElement forms;
@@ -28,18 +23,20 @@ public class HomePage extends BasePage {
     private WebElement elements;
 
 
-
     public void clickalertframewindow(){
-
-        alertsframewindow.click();
+        alertsFrameWindow.click();
+        LoggerUtility.info("The user clicks on alertsframewindow button");
     }
 
-    public void clickforms(){
+    public void clickForms(){
       forms.click();
+        LoggerUtility.info("The user clicks on Forms button");
     }
 
 
-    public void clickelements(){
+    public void clickElements(){
         elements.click();
+        LoggerUtility.info("The user clicks on Elements button");
     }
+
 }

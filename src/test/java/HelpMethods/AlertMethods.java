@@ -27,14 +27,14 @@ public class AlertMethods {
     }
     public void cancelAlert(){
         waitForAlert();
-        Alert alertokcancel = driver.switchTo().alert();
-        alertokcancel.dismiss(); // accept = ok si dismiss = cancel
+        Alert alertConfirmation = driver.switchTo().alert();
+        alertConfirmation.dismiss(); // accept = ok si dismiss = cancel
     }
 
     public void fillAlert(String value){
         waitForAlert();
-        Alert alertvalue = driver.switchTo().alert();
-        alertvalue.sendKeys(value);
-        alertvalue.accept();
+        Alert alertPrompt = driver.switchTo().alert();
+        alertPrompt.sendKeys(value);
+        alertPrompt.accept();
     }
 }
