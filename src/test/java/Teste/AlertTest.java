@@ -16,7 +16,7 @@ public class AlertTest extends Hooks {
         AlertObject alertObject = new AlertObject(testData);
 
         HomePage homePage = new HomePage(getDriver());
-        homePage.clickalertframewindow();
+        homePage.clickAlertWindow();
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
         alertFrameWindowPage.clickAlerts();
@@ -32,7 +32,9 @@ public class AlertTest extends Hooks {
         alertPage.interractAlertValue(alertObject);
 
 
+    }
 
+}
 
 
 //        WebElement alerts = driver.findElement(By.xpath("//span[text()='Alerts']"));
@@ -67,7 +69,4 @@ public class AlertTest extends Hooks {
 //        alertvalue.accept();
 
 
-    }
 
-
-}

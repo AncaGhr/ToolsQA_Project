@@ -15,11 +15,12 @@ public class ElementMethods {
     private WebDriver driver;
 
     public ElementMethods(WebDriver driver) {
+
         this.driver = driver;
     }
 
     private void waitVisibleElement(WebElement element){ // se foloseste aceasta metoda pentru a determina site-ul  sa astepte sa se incarce elementele din pagina
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -45,9 +46,9 @@ public class ElementMethods {
         element.sendKeys(keyboardPress);
     }
 
-    public void fillElement(WebElement element, Keys value){
+    public void fillElement(WebElement element, Keys keyboardPress){
         waitVisibleElement(element);
-        element.sendKeys(value);
+        element.sendKeys(keyboardPress);
     }
 
     public void scrollByPixel(Integer x, Integer y){

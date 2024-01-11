@@ -20,19 +20,12 @@ public class PracticeFormsPage extends BasePage {
         super(driver);
     }
 
-//    public WebDriver driver;
-//
-//    public PracticeFormsPage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver, this);
-//    }
 
     @FindBy(id = "firstName")
     private WebElement firstname;
 
     @FindBy(id = "lastName")
     private WebElement lastname;
-
 
     @FindBy(id = "userEmail")
     private WebElement email;
@@ -53,7 +46,7 @@ public class PracticeFormsPage extends BasePage {
     private WebElement uploadPicture;
 
     @FindBy(id = "currentAddress")
-    private WebElement adress;
+    private WebElement address;
 
     @FindBy(id = "state")
     private WebElement state;
@@ -91,7 +84,8 @@ public class PracticeFormsPage extends BasePage {
         fillsubjects(formTableObject.getSubjectsvalue());
         elementMethods.scrollByPixel(0,400);
         fillhobbies();
-        filladress(formTableObject.getAddressvalue());
+        fillphoto();
+        filladdress(formTableObject.getAddressvalue());
         fillstate(formTableObject.getStatevalue());
         fillcity(formTableObject.getCityvalue());
 
@@ -164,8 +158,8 @@ public class PracticeFormsPage extends BasePage {
         choosefile.sendKeys(file.getAbsolutePath());
     }
 
-    public void filladress(String adressvalue) {
-        elementMethods.fillElement(adress, adressvalue);
+    public void filladdress(String adressvalue) {
+        elementMethods.fillElement(address, adressvalue);
         LoggerUtility.info("The user fills adress with value : " + adressvalue);
         //adress.sendKeys(adressvalue);
     }

@@ -11,6 +11,7 @@ public class FrameMethods {
     }
 
     public void switchToFrame(String value){
+
         driver.switchTo().frame(value);
     }
 

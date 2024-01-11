@@ -8,10 +8,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AlertMethods {
-
     private WebDriver driver;
 
     public AlertMethods(WebDriver driver) {
+
         this.driver = driver;
     }
 
@@ -33,8 +33,8 @@ public class AlertMethods {
 
     public void fillAlert(String value){
         waitForAlert();
-        Alert alertPrompt = driver.switchTo().alert();
-        alertPrompt.sendKeys(value);
-        alertPrompt.accept();
+        Alert alertPromt = driver.switchTo().alert();
+        alertPromt.sendKeys(value);
+        alertPromt.accept();
     }
 }

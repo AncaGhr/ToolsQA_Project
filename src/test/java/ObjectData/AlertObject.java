@@ -4,14 +4,14 @@ import java.util.HashMap;
 
 public class AlertObject {
 
-    private String PromptAlertValue;
+    private String promptAlertValue;
 
     public String getPromptAlertValue() {
-        return PromptAlertValue;
+        return promptAlertValue;
     }
 
-    public void setPromptAlertValue(String PromptAlertValue) {
-        this.PromptAlertValue = PromptAlertValue;
+    public void setPromptAlertValue(String promptAlertValue) {
+        this.promptAlertValue = promptAlertValue;
     }
 
     public AlertObject(HashMap<String, String> testData) {
@@ -23,7 +23,7 @@ public class AlertObject {
     private void populateObject(HashMap<String, String> testData) {
         for (String Key : testData.keySet()) {
             switch (Key) {
-                case "PromptAlertValue":
+                case "promptAlertValue":
                     setPromptAlertValue(testData.get(Key));
                     break;
             }

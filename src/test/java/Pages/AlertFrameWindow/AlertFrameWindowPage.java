@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 public class AlertFrameWindowPage extends BasePage {
 
     public AlertFrameWindowPage(WebDriver driver){
-
         super(driver);
     }
 

@@ -16,6 +16,7 @@ import java.time.Duration;
 public class AlertPage extends BasePage {
 
     public AlertPage(WebDriver driver) {
+
         super(driver);
     }
 
@@ -36,7 +37,7 @@ public class AlertPage extends BasePage {
     private WebElement confirmButton;
 
     @FindBy(id = "promptButton" )
-    private  WebElement promptButton;
+    private  WebElement promtButton;
 
 
 
@@ -77,20 +78,15 @@ public class AlertPage extends BasePage {
 
         alertMethods.cancelAlert();
         LoggerUtility.info("The user clicks on cancelAlert");
-
-//        alertokcancelbutton.click();
-//        alertMethods.cancelAlert();
-//        Alert alertokcancel = driver.switchTo().alert();
-//        alertokcancel.dismiss(); // accept = ok si dismiss = cancel
     }
 
     public void interractAlertValue(AlertObject alertObject){
 
-        elementMethods.clickElement(promptButton);
+        elementMethods.clickElement(promtButton);
         LoggerUtility.info("The user clicks on promtButton");
 
         alertMethods.fillAlert(alertObject.getPromptAlertValue());
-        LoggerUtility.info("The user fills the PromptAlertValue" + promptButton);
+        LoggerUtility.info("The user fills the PromptAlertValue" + promtButton);
 
 //        alertvaluebutton.click();
 //        alertMethods.fillAlert(value);

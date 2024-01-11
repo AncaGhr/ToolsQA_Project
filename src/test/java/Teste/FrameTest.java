@@ -14,7 +14,7 @@ public class FrameTest extends Hooks {
     public void testmethod() {
 
         HomePage homePage = new HomePage(getDriver());
-        homePage.clickalertframewindow();
+        homePage.clickAlertWindow();
 
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());

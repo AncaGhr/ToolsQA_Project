@@ -43,6 +43,7 @@ public class Hooks extends ShareData { // va avea ca rol sa aduca impreuna toate
     @AfterSuite
 
     public void finishArtifacts() {
+
         LoggerUtility.mergeLogsIntoOne();
     }
 
