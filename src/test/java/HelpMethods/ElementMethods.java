@@ -18,9 +18,8 @@ public class ElementMethods {
 
         this.driver = driver;
     }
-
-    private void waitVisibleElement(WebElement element){ // se foloseste aceasta metoda pentru a determina site-ul  sa astepte sa se incarce elementele din pagina
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    private void waitVisibleElement(WebElement element){  // se foloseste aceasta metoda pentru a determina site-ul sa astepte sa se incarce elementele in pagina
+        WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -40,7 +39,7 @@ public class ElementMethods {
         element.sendKeys(keyboardPress);
     }
 
-    public void fillElement(WebElement element, String value, String keyboardPress) {
+    public void fillElement(WebElement element, String value, String keyboardPress){
         waitVisibleElement(element);
         element.sendKeys(value);
         element.sendKeys(keyboardPress);
@@ -51,7 +50,7 @@ public class ElementMethods {
         element.sendKeys(keyboardPress);
     }
 
-    public void scrollByPixel(Integer x, Integer y){
+    public void scrollByPixel (Integer x, Integer y){
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy("+x+","+y+")");
     }
@@ -66,5 +65,5 @@ public class ElementMethods {
         String actualmessage = element.getText();
         Assert.assertEquals(actualmessage, value);
     }
-
 }
+
