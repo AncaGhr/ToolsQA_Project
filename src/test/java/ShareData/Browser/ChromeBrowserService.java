@@ -37,7 +37,7 @@ public class ChromeBrowserService extends BaseBrowserService implements BrowserS
         ChromeOptions chromeOptions = new ChromeOptions();
 
         if(cicd){
-        chromeOptions.addArguments(testData.get("--headless"));
+        chromeOptions.addArguments(testData.get("headless"));
         }
         if(!testData.get("headless").isEmpty()){
             chromeOptions.addArguments(testData.get("headless"));
