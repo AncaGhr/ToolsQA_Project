@@ -11,7 +11,7 @@ on:
         required: true
         default: 'chrome'
       suite:
-        description: 'Choose suite from the following: SmokeSuite, SanitySuite, RegressionSuite'
+        description: 'Choose suite from the following: smokesuite, sanitysuite, regressionsuite'
         required: true
         default: 'smokesuite'
 
