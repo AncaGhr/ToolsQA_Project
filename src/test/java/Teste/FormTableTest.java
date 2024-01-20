@@ -30,8 +30,8 @@ public class FormTableTest extends Hooks { //in loc de Share Data am pus Hooks
         practiceFormsPage.fillsubmit();
 
         practiceFormsPage.clickClose();
-
-
+    }
+}
 
 //        String firstnamevalue = "Anca";
 //        String lastnamevalue = "Ghr";
@@ -117,6 +117,4 @@ public class FormTableTest extends Hooks { //in loc de Share Data am pus Hooks
 //        jse.executeScript("arguments[0].click();", submitbutton);
 
 
-    }
 
-}

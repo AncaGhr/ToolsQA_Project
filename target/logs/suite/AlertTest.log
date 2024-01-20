@@ -1,1 +1,14 @@
-[2024-01-16T19:07:32,867][INFO ][TestNG-test=Regression Tests-1] =========================== Execution started : AlertTest===========================
+[2024-01-20T12:42:32,983][INFO ][main] =========================== Execution started : AlertTest===========================
+[2024-01-20T12:42:41,254][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-20T12:42:42,077][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
+[2024-01-20T12:42:42,973][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickAlerts ==>  The user clicks on alerts button
+[2024-01-20T12:42:43,484][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertOK ==>  The user clicks on alertaOkButton
+[2024-01-20T12:42:43,537][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertOK ==>  The user clicks on acceptAlert
+[2024-01-20T12:42:43,822][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDelay ==>  The user clicks on alertDelayButton
+[2024-01-20T12:42:49,201][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDelay ==>  The user clicks on acceptAlert
+[2024-01-20T12:42:49,410][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDismiss ==>  The user clicks on confirmButton
+[2024-01-20T12:42:49,461][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDismiss ==>  The user clicks on cancelAlert
+[2024-01-20T12:42:49,734][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertValue ==>  The user clicks on promtButton
+[2024-01-20T12:42:49,809][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertValue ==>  The user writes a message and clicks Ok button
+[2024-01-20T12:42:50,400][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-20T12:42:50,404][INFO ][main] =========================== Execution finished : AlertTest===========================

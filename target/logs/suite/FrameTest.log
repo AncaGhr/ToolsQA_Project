@@ -1,11 +1,11 @@
-[2024-01-16T19:16:37,556][INFO ][main] =========================== Execution started : FrameTest===========================
-[2024-01-16T19:16:44,522][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
-[2024-01-16T19:16:45,207][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
-[2024-01-16T19:16:45,398][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickFrames ==>  The user clicks on frames button
-[2024-01-16T19:16:55,505][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches on specific frame
-[2024-01-16T19:16:55,532][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user prints the frameText value
-[2024-01-16T19:16:55,534][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches back to primary frame
-[2024-01-16T19:17:05,622][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user switches on second frame
-[2024-01-16T19:17:05,644][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user prints the frameText value
-[2024-01-16T19:17:06,074][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
-[2024-01-16T19:17:06,082][INFO ][main] =========================== Execution finished : FrameTest===========================
+[2024-01-18T19:01:59,930][INFO ][main] =========================== Execution started : FrameTest===========================
+[2024-01-18T19:02:04,058][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-18T19:02:04,289][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
+[2024-01-18T19:02:04,462][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickFrames ==>  The user clicks on frames button
+[2024-01-18T19:02:14,605][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches on specific frame
+[2024-01-18T19:02:14,626][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user prints the frameText value
+[2024-01-18T19:02:14,628][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches back to primary frame
+[2024-01-18T19:02:24,673][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user switches on second frame
+[2024-01-18T19:02:24,687][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user prints the frameText value
+[2024-01-18T19:02:24,945][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-18T19:02:24,947][INFO ][main] =========================== Execution finished : FrameTest===========================

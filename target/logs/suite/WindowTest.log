@@ -1,1 +1,2 @@
-[2024-01-16T19:07:32,934][INFO ][TestNG-test=Regression Tests-2] =========================== Execution started : WindowTest===========================
+[2024-01-18T20:44:21,547][INFO ][main] =========================== Execution started : WindowTest===========================
+[2024-01-18T20:44:30,921][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success

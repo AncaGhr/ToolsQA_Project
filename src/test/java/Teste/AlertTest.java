@@ -11,7 +11,7 @@ import ShareData.Hooks;
 public class AlertTest extends Hooks {
 
     @Test
-    public void testmethod() {
+    public void testMethod() {
 
         AlertObject alertObject = new AlertObject(testData);
 
@@ -30,11 +30,9 @@ public class AlertTest extends Hooks {
         alertPage.interractAlertDismiss();
 
         alertPage.interractAlertValue(alertObject);
-
-
     }
-
 }
+
 
 
 //        WebElement alerts = driver.findElement(By.xpath("//span[text()='Alerts']"));

@@ -10,12 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    public WindowMethods windowMethods;
-    public AlertMethods alertMethods;
-    public FrameMethods frameMethods;
-    public ElementMethods elementMethods;
+    protected WindowMethods windowMethods;
+    protected AlertMethods alertMethods;
+    protected FrameMethods frameMethods;
+    protected ElementMethods elementMethods;
     public BasePage (WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -24,5 +24,4 @@ public class BasePage {
         frameMethods = new FrameMethods(driver);
         elementMethods = new ElementMethods(driver);
     }
-
 }

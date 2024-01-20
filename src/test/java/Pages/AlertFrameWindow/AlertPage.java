@@ -20,13 +20,6 @@ public class AlertPage extends BasePage {
         super(driver);
     }
 
-//    public WebDriver driver;
-//
-//    public AlertPage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver,this);
-//    }
-
     @FindBy(id = "alertButton")
     private WebElement alertaOkButton;
 
@@ -36,7 +29,7 @@ public class AlertPage extends BasePage {
     @FindBy(id = "confirmButton")
     private WebElement confirmButton;
 
-    @FindBy(id = "promptButton" )
+    @FindBy(id = "promtButton" )
     private  WebElement promtButton;
 
 
@@ -49,7 +42,7 @@ public class AlertPage extends BasePage {
         alertMethods.acceptAlert();
         LoggerUtility.info("The user clicks on acceptAlert");
 
-//        alertokbutton.click();
+//           alertaOkButton.click();
 //        alertMethods.acceptAlert();
 //        Alert alertok = driver.switchTo().alert();
 //        alertok.accept();
@@ -86,7 +79,7 @@ public class AlertPage extends BasePage {
         LoggerUtility.info("The user clicks on promtButton");
 
         alertMethods.fillAlert(alertObject.getPromptAlertValue());
-        LoggerUtility.info("The user fills the PromptAlertValue" + promtButton);
+        LoggerUtility.info("The user writes a message and clicks Ok button");
 
 //        alertvaluebutton.click();
 //        alertMethods.fillAlert(value);

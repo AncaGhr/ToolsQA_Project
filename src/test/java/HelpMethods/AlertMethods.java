@@ -11,7 +11,6 @@ public class AlertMethods {
     private WebDriver driver;
 
     public AlertMethods(WebDriver driver) {
-
         this.driver = driver;
     }
 
@@ -30,10 +29,9 @@ public class AlertMethods {
         Alert alertConfirmation = driver.switchTo().alert();
         alertConfirmation.dismiss(); // accept = ok si dismiss = cancel
     }
-
     public void fillAlert(String value){
         waitForAlert();
-        Alert alertPromt = driver.switchTo().alert();
+        Alert alertPromt = driver.switchTo().alert(); // switch pe alerta
         alertPromt.sendKeys(value);
         alertPromt.accept();
     }

@@ -101,9 +101,6 @@ public class WebTableTest extends Hooks {
 //        Assert.assertTrue(lastentrytable.contains(salaryvalue));
 //        Assert.assertTrue(lastentrytable.contains(departamentvalue));
 
-
-
-
     }
 
 }

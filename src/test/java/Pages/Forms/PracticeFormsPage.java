@@ -120,9 +120,9 @@ public class PracticeFormsPage extends BasePage {
         //lastname.sendKeys(lastnamevalue);
     }
 
-    public void fillemail(String emailadress) {
-        elementMethods.fillElement(email, emailadress);
-        LoggerUtility.info("The user fills email with value : " + emailadress);
+    public void fillemail(String emailvalue) {
+        elementMethods.fillElement(email, emailvalue);
+        LoggerUtility.info("The user fills email with value : " + emailvalue);
         //email.sendKeys(emailadress);
     }
 
@@ -153,14 +153,14 @@ public class PracticeFormsPage extends BasePage {
 
 
     public void fillphoto(){
-        WebElement choosefile = driver.findElement(By.id("uploadPicture"));
+//        WebElement choosefile = driver.findElement(By.id("uploadPicture"));
         File file = new File("src/test/resources/Eu color.jpg");
-        choosefile.sendKeys(file.getAbsolutePath());
+        uploadPicture.sendKeys(file.getAbsolutePath());
     }
 
-    public void filladdress(String adressvalue) {
-        elementMethods.fillElement(address, adressvalue);
-        LoggerUtility.info("The user fills adress with value : " + adressvalue);
+    public void filladdress(String addressvalue) {
+        elementMethods.fillElement(address, addressvalue);
+        LoggerUtility.info("The user fills adress with value : " + address);
         //adress.sendKeys(adressvalue);
     }
 
@@ -224,6 +224,7 @@ public class PracticeFormsPage extends BasePage {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM,yyyy"); // poate fi si Locale.ENGLISH pentru luna intreaga
         LocalDateTime now = LocalDateTime.now();
         String dateofbirthvalue = dtf.format(now);
+
         elementMethods.validateElementMessage(thanksmessage,expectedMessage);
 
 
@@ -260,10 +261,7 @@ public class PracticeFormsPage extends BasePage {
 
         Assert.assertTrue(validationtable.get(9).getText().contains("State and City"));
         Assert.assertTrue(validationtable.get(9).getText().contains(statevalue + " " + cityvalue));
-
     }
-
-
 }
 
 

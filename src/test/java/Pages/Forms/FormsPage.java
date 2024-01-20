@@ -25,7 +25,7 @@ public class FormsPage extends BasePage {
 
     public void clickPracticeForm(){
         practiceElement.click();
-        LoggerUtility.info("The user clicks on practice forms");
+        LoggerUtility.info("The user clicks on practiceElement button");
     }
 
 

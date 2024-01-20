@@ -1,20 +1,67 @@
 Contents of file AlertTest.log
-[2024-01-16T19:07:32,867][INFO ][TestNG-test=Regression Tests-1] =========================== Execution started : AlertTest===========================
+[2024-01-20T12:42:32,983][INFO ][main] =========================== Execution started : AlertTest===========================
+[2024-01-20T12:42:41,254][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-20T12:42:42,077][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
+[2024-01-20T12:42:42,973][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickAlerts ==>  The user clicks on alerts button
+[2024-01-20T12:42:43,484][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertOK ==>  The user clicks on alertaOkButton
+[2024-01-20T12:42:43,537][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertOK ==>  The user clicks on acceptAlert
+[2024-01-20T12:42:43,822][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDelay ==>  The user clicks on alertDelayButton
+[2024-01-20T12:42:49,201][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDelay ==>  The user clicks on acceptAlert
+[2024-01-20T12:42:49,410][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDismiss ==>  The user clicks on confirmButton
+[2024-01-20T12:42:49,461][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertDismiss ==>  The user clicks on cancelAlert
+[2024-01-20T12:42:49,734][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertValue ==>  The user clicks on promtButton
+[2024-01-20T12:42:49,809][INFO ][main] main : Pages.AlertFrameWindow.AlertPage : interractAlertValue ==>  The user writes a message and clicks Ok button
+[2024-01-20T12:42:50,400][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-20T12:42:50,404][INFO ][main] =========================== Execution finished : AlertTest===========================
 Contents of file FormTableTest.log
-[2024-01-16T19:07:32,832][INFO ][TestNG-test=Regression Tests-2] =========================== Execution started : FormTableTest===========================
+[2024-01-18T19:02:32,170][INFO ][main] =========================== Execution started : FormTableTest===========================
+[2024-01-18T19:02:38,159][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-18T19:02:38,369][INFO ][main] main : Pages.HomePage : clickForms ==>  The user clicks on Forms button
+[2024-01-18T19:02:38,592][INFO ][main] main : Pages.Forms.FormsPage : clickPracticeForm ==>  The user clicks on practiceElement button
+[2024-01-18T19:02:38,847][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillFirstName ==>  The user fills FirstName with value : Anca
+[2024-01-18T19:02:39,003][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillLastName ==>  The user fills LastName with value : Ghr
+[2024-01-18T19:02:39,177][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillemail ==>  The user fills email with value : anca@example.com
+[2024-01-18T19:02:39,317][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillgender ==>  The user fills gender with value : [[ChromeDriver: chrome on windows (57eb174a4daa4a7b064758e2c225fa90)] -> xpath: //label[@for='gender-radio-2']]
+[2024-01-18T19:02:39,412][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillmobile ==>  The user fills mobile with value : 0720100200
+[2024-01-18T19:02:39,587][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillsubjects ==>  The user fills subjects with value: English
+[2024-01-18T19:02:39,693][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillhobbies ==>  The user fills hobby with value : [[ChromeDriver: chrome on windows (57eb174a4daa4a7b064758e2c225fa90)] -> xpath: //label[@for='hobbies-checkbox-2']]
+[2024-01-18T19:02:39,857][INFO ][main] main : Pages.Forms.PracticeFormsPage : filladdress ==>  The user fills adress with value : [[ChromeDriver: chrome on windows (57eb174a4daa4a7b064758e2c225fa90)] -> id: currentAddress]
+[2024-01-18T19:02:39,866][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user scrolls down the page 
+[2024-01-18T19:02:39,893][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user click on state button
+[2024-01-18T19:02:40,075][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user selects the state NCR
+[2024-01-18T19:02:40,124][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillcity ==>  The user click on city
+[2024-01-18T19:02:40,348][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillcity ==>  The user selects the city: Delhi
+[2024-01-18T19:02:40,449][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillsubmit ==>  The user clicks on submit button: 
+[2024-01-18T19:02:40,568][INFO ][main] main : Pages.Forms.PracticeFormsPage : clickClose ==>  The user clicks on close button: 
+[2024-01-18T19:02:40,839][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-18T19:02:40,841][INFO ][main] =========================== Execution finished : FormTableTest===========================
 Contents of file FrameTest.log
-[2024-01-16T19:16:37,556][INFO ][main] =========================== Execution started : FrameTest===========================
-[2024-01-16T19:16:44,522][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
-[2024-01-16T19:16:45,207][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
-[2024-01-16T19:16:45,398][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickFrames ==>  The user clicks on frames button
-[2024-01-16T19:16:55,505][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches on specific frame
-[2024-01-16T19:16:55,532][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user prints the frameText value
-[2024-01-16T19:16:55,534][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches back to primary frame
-[2024-01-16T19:17:05,622][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user switches on second frame
-[2024-01-16T19:17:05,644][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user prints the frameText value
-[2024-01-16T19:17:06,074][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
-[2024-01-16T19:17:06,082][INFO ][main] =========================== Execution finished : FrameTest===========================
+[2024-01-18T19:01:59,930][INFO ][main] =========================== Execution started : FrameTest===========================
+[2024-01-18T19:02:04,058][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-18T19:02:04,289][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
+[2024-01-18T19:02:04,462][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickFrames ==>  The user clicks on frames button
+[2024-01-18T19:02:14,605][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches on specific frame
+[2024-01-18T19:02:14,626][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user prints the frameText value
+[2024-01-18T19:02:14,628][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches back to primary frame
+[2024-01-18T19:02:24,673][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user switches on second frame
+[2024-01-18T19:02:24,687][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user prints the frameText value
+[2024-01-18T19:02:24,945][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-18T19:02:24,947][INFO ][main] =========================== Execution finished : FrameTest===========================
 Contents of file WebTableTest.log
-[2024-01-16T19:07:32,921][INFO ][TestNG-test=Regression Tests-1] =========================== Execution started : WebTableTest===========================
+[2024-01-18T19:01:43,183][INFO ][main] =========================== Execution started : WebTableTest===========================
+[2024-01-18T19:01:47,316][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-18T19:01:47,544][INFO ][main] main : Pages.HomePage : clickElements ==>  The user clicks on Elements button
+[2024-01-18T19:01:47,802][INFO ][main] main : Pages.Elements.ElementsPage : clickWebTables ==>  The user clicks on webtables element
+[2024-01-18T19:01:48,356][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user clicks on the add button
+[2024-01-18T19:01:48,659][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills firstname field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: firstName]
+[2024-01-18T19:01:48,809][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills lastname field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: lastName]
+[2024-01-18T19:01:49,004][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills email field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: userEmail]
+[2024-01-18T19:01:49,115][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills age field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: age]
+[2024-01-18T19:01:49,242][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills salary field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: salary]
+[2024-01-18T19:01:49,350][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills department field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: department]
+[2024-01-18T19:01:49,446][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user clicks on submit button
+[2024-01-18T19:01:49,788][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-18T19:01:49,790][INFO ][main] =========================== Execution finished : WebTableTest===========================
 Contents of file WindowTest.log
-[2024-01-16T19:07:32,934][INFO ][TestNG-test=Regression Tests-2] =========================== Execution started : WindowTest===========================
+[2024-01-18T20:44:21,547][INFO ][main] =========================== Execution started : WindowTest===========================
+[2024-01-18T20:44:30,921][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success

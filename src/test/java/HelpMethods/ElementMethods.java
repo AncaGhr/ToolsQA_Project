@@ -7,11 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
+import java.security.Key;
 import java.time.Duration;
 
 public class ElementMethods {
-
     private WebDriver driver;
 
     public ElementMethods(WebDriver driver) {
@@ -20,7 +19,7 @@ public class ElementMethods {
     }
     private void waitVisibleElement(WebElement element){  // se foloseste aceasta metoda pentru a determina site-ul sa astepte sa se incarce elementele in pagina
         WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.visibilityOf(element)); //asteapta pana cand elementul e vizibil pe pagina
     }
 
     public void clickElement(WebElement element){
@@ -62,8 +61,8 @@ public class ElementMethods {
 
     public void validateElementMessage(WebElement element, String value){
         waitVisibleElement(element);
-        String actualmessage = element.getText();
-        Assert.assertEquals(actualmessage, value);
+        String actualMessage = element.getText();
+        Assert.assertEquals(actualMessage, value);
     }
 }
 

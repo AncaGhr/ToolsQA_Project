@@ -11,6 +11,7 @@ public class AlertObject {
     }
 
     public void setPromptAlertValue(String promptAlertValue) {
+
         this.promptAlertValue = promptAlertValue;
     }
 
@@ -27,7 +28,6 @@ public class AlertObject {
                     setPromptAlertValue(testData.get(Key));
                     break;
             }
-
         }
     }
 }
