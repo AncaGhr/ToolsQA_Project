@@ -1,21 +1,21 @@
-[2024-01-18T19:02:32,170][INFO ][main] =========================== Execution started : FormTableTest===========================
-[2024-01-18T19:02:38,159][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
-[2024-01-18T19:02:38,369][INFO ][main] main : Pages.HomePage : clickForms ==>  The user clicks on Forms button
-[2024-01-18T19:02:38,592][INFO ][main] main : Pages.Forms.FormsPage : clickPracticeForm ==>  The user clicks on practiceElement button
-[2024-01-18T19:02:38,847][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillFirstName ==>  The user fills FirstName with value : Anca
-[2024-01-18T19:02:39,003][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillLastName ==>  The user fills LastName with value : Ghr
-[2024-01-18T19:02:39,177][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillemail ==>  The user fills email with value : anca@example.com
-[2024-01-18T19:02:39,317][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillgender ==>  The user fills gender with value : [[ChromeDriver: chrome on windows (57eb174a4daa4a7b064758e2c225fa90)] -> xpath: //label[@for='gender-radio-2']]
-[2024-01-18T19:02:39,412][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillmobile ==>  The user fills mobile with value : 0720100200
-[2024-01-18T19:02:39,587][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillsubjects ==>  The user fills subjects with value: English
-[2024-01-18T19:02:39,693][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillhobbies ==>  The user fills hobby with value : [[ChromeDriver: chrome on windows (57eb174a4daa4a7b064758e2c225fa90)] -> xpath: //label[@for='hobbies-checkbox-2']]
-[2024-01-18T19:02:39,857][INFO ][main] main : Pages.Forms.PracticeFormsPage : filladdress ==>  The user fills adress with value : [[ChromeDriver: chrome on windows (57eb174a4daa4a7b064758e2c225fa90)] -> id: currentAddress]
-[2024-01-18T19:02:39,866][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user scrolls down the page 
-[2024-01-18T19:02:39,893][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user click on state button
-[2024-01-18T19:02:40,075][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user selects the state NCR
-[2024-01-18T19:02:40,124][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillcity ==>  The user click on city
-[2024-01-18T19:02:40,348][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillcity ==>  The user selects the city: Delhi
-[2024-01-18T19:02:40,449][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillsubmit ==>  The user clicks on submit button: 
-[2024-01-18T19:02:40,568][INFO ][main] main : Pages.Forms.PracticeFormsPage : clickClose ==>  The user clicks on close button: 
-[2024-01-18T19:02:40,839][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
-[2024-01-18T19:02:40,841][INFO ][main] =========================== Execution finished : FormTableTest===========================
+[2024-01-23T18:47:18,594][INFO ][main] =========================== Execution started : FormTableTest===========================
+[2024-01-23T18:47:27,037][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-23T18:47:27,259][INFO ][main] main : Pages.HomePage : clickForms ==>  The user clicks on Forms button
+[2024-01-23T18:47:27,663][INFO ][main] main : Pages.Forms.FormsPage : clickPracticeForm ==>  The user clicks on practiceElement button
+[2024-01-23T18:47:28,090][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillFirstName ==>  The user fills FirstName with value : Anca
+[2024-01-23T18:47:28,240][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillLastName ==>  The user fills LastName with value : Ghr
+[2024-01-23T18:47:28,444][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillemail ==>  The user fills email with value : anca@example.com
+[2024-01-23T18:47:28,596][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillgender ==>  The user fills gender with value : [[ChromeDriver: chrome on windows (5fcbfd0af2edcb6792813504dde81565)] -> xpath: //label[@for='gender-radio-2']]
+[2024-01-23T18:47:28,773][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillmobile ==>  The user fills mobile with value : 0720100200
+[2024-01-23T18:47:29,070][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillsubjects ==>  The user fills subjects with value: English
+[2024-01-23T18:47:29,254][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillhobbies ==>  The user fills hobby with value : [[ChromeDriver: chrome on windows (5fcbfd0af2edcb6792813504dde81565)] -> xpath: //label[@for='hobbies-checkbox-2']]
+[2024-01-23T18:47:29,501][INFO ][main] main : Pages.Forms.PracticeFormsPage : filladdress ==>  The user fills adress with value : [[ChromeDriver: chrome on windows (5fcbfd0af2edcb6792813504dde81565)] -> id: currentAddress]
+[2024-01-23T18:47:29,520][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user scrolls down the page 
+[2024-01-23T18:47:29,565][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user click on state button
+[2024-01-23T18:47:29,880][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillstate ==>  The user selects the state NCR
+[2024-01-23T18:47:29,916][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillcity ==>  The user click on city
+[2024-01-23T18:47:30,186][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillcity ==>  The user selects the city: Delhi
+[2024-01-23T18:47:30,296][INFO ][main] main : Pages.Forms.PracticeFormsPage : fillsubmit ==>  The user clicks on submit button: 
+[2024-01-23T18:47:30,488][INFO ][main] main : Pages.Forms.PracticeFormsPage : clickClose ==>  The user clicks on close button: 
+[2024-01-23T18:47:30,790][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-23T18:47:30,791][INFO ][main] =========================== Execution finished : FormTableTest===========================

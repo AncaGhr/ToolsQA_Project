@@ -1,14 +1,12 @@
-[2024-01-18T19:01:43,183][INFO ][main] =========================== Execution started : WebTableTest===========================
-[2024-01-18T19:01:47,316][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
-[2024-01-18T19:01:47,544][INFO ][main] main : Pages.HomePage : clickElements ==>  The user clicks on Elements button
-[2024-01-18T19:01:47,802][INFO ][main] main : Pages.Elements.ElementsPage : clickWebTables ==>  The user clicks on webtables element
-[2024-01-18T19:01:48,356][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user clicks on the add button
-[2024-01-18T19:01:48,659][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills firstname field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: firstName]
-[2024-01-18T19:01:48,809][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills lastname field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: lastName]
-[2024-01-18T19:01:49,004][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills email field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: userEmail]
-[2024-01-18T19:01:49,115][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills age field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: age]
-[2024-01-18T19:01:49,242][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills salary field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: salary]
-[2024-01-18T19:01:49,350][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills department field[[ChromeDriver: chrome on windows (8617eea0da87e9d97cb5c0f78a05359c)] -> id: department]
-[2024-01-18T19:01:49,446][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user clicks on submit button
-[2024-01-18T19:01:49,788][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
-[2024-01-18T19:01:49,790][INFO ][main] =========================== Execution finished : WebTableTest===========================
+[2024-02-03T21:07:54,663][INFO ][main] =========================== Execution started : WebTableTest===========================
+[2024-02-03T21:07:57,990][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-02-03T21:07:59,185][ERROR][main] main : ShareData.Hooks : clearEnvironment ==>  element click intercepted: Element <h5>...</h5> is not clickable at point (190, 227). Other element would receive the click: <div class="fc-dialog-overlay"></div>
+  (Session info: chrome=121.0.6167.140)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.22'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4159097a7610058dad1641fb8ccae11, clickElement {id=7C683714C1E890DAD624FACDBEBDF444_element_337}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\Anca\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:11613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:11613/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f4159097a7610058dad1641fb8ccae11)] -> xpath: //h5[text()='Elements']]
+Session ID: f4159097a7610058dad1641fb8ccae11
+[2024-02-03T21:07:59,186][INFO ][main] =========================== Test failed: ===========================

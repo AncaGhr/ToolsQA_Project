@@ -1,11 +1,12 @@
-[2024-01-18T19:01:59,930][INFO ][main] =========================== Execution started : FrameTest===========================
-[2024-01-18T19:02:04,058][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
-[2024-01-18T19:02:04,289][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
-[2024-01-18T19:02:04,462][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickFrames ==>  The user clicks on frames button
-[2024-01-18T19:02:14,605][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches on specific frame
-[2024-01-18T19:02:14,626][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user prints the frameText value
-[2024-01-18T19:02:14,628][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractFirstIFrame ==>  The user switches back to primary frame
-[2024-01-18T19:02:24,673][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user switches on second frame
-[2024-01-18T19:02:24,687][INFO ][main] main : Pages.AlertFrameWindow.FramePage : interractSecondIFrame ==>  The user prints the frameText value
-[2024-01-18T19:02:24,945][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
-[2024-01-18T19:02:24,947][INFO ][main] =========================== Execution finished : FrameTest===========================
+[2024-02-03T22:22:11,786][INFO ][main] =========================== Execution started : FrameTest===========================
+[2024-02-03T22:22:15,883][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-02-03T22:22:17,107][ERROR][main] main : ShareData.Hooks : clearEnvironment ==>  element click intercepted: Element <h5>...</h5> is not clickable at point (921, 227). Other element would receive the click: <div class="fc-header fc-dialog-restricted-content">...</div>
+  (Session info: chrome=121.0.6167.140)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.22'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c3cafcc5291e76ea682c717be04bbae, clickElement {id=D9134C199C194F364EE934825A3DF9AF_element_21}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\Anca\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:2074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:2074/devtool..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8c3cafcc5291e76ea682c717be04bbae)] -> xpath: //h5[text()='Alerts, Frame & Windows']]
+Session ID: 8c3cafcc5291e76ea682c717be04bbae
+[2024-02-03T22:22:17,108][INFO ][main] =========================== Test failed: ===========================

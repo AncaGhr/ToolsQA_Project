@@ -1,2 +1,14 @@
-[2024-01-18T20:44:21,547][INFO ][main] =========================== Execution started : WindowTest===========================
-[2024-01-18T20:44:30,921][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-23T18:46:28,130][INFO ][main] =========================== Execution started : WindowTest===========================
+[2024-01-23T18:46:32,003][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-01-23T18:46:32,494][INFO ][main] main : Pages.HomePage : clickAlertWindow ==>  The user clicks on alertsframewindow button
+[2024-01-23T18:46:32,706][INFO ][main] main : Pages.AlertFrameWindow.AlertFrameWindowPage : clickWindows ==>  The user clicks on browserWindows button
+[2024-01-23T18:46:33,447][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractTab ==>  The user clicks on interractTab button
+[2024-01-23T18:46:33,546][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractTab ==>  The user switches to a new tab
+[2024-01-23T18:46:33,630][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractTab ==>  The user closes the current tab
+[2024-01-23T18:46:33,701][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractTab ==>  The user switches back to the main tab
+[2024-01-23T18:46:33,985][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractWindow ==>  The user clicks on interractWindow button
+[2024-01-23T18:46:34,073][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractWindow ==>  The user switches to a new window
+[2024-01-23T18:46:34,167][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractWindow ==>  The user closes the current window
+[2024-01-23T18:46:34,223][INFO ][main] main : Pages.AlertFrameWindow.WindowsPage : interractWindow ==>  The user switches back tot the main window
+[2024-01-23T18:46:34,532][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-01-23T18:46:34,534][INFO ][main] =========================== Execution finished : WindowTest===========================
