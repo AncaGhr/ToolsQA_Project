@@ -11,6 +11,8 @@ import ShareData.Hooks;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
+import javax.sound.midi.ShortMessage;
+
 public class WebTableTest extends Hooks {
 
 
@@ -21,7 +23,9 @@ public class WebTableTest extends Hooks {
         WebTableObject webTableObject = new WebTableObject(testData);
 
         HomePage homePage = new HomePage(getDriver());
+        homePage.clickConsent();
         homePage.clickElements();
+
 
         JavascriptExecutor JS = (JavascriptExecutor) getDriver();
         JS.executeScript("window.scrollBy(0,450)", "");

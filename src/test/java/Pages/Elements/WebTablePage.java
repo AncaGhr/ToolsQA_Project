@@ -1,5 +1,6 @@
 package Pages.Elements;
 
+import Database.Queries.WebTable;
 import Logger.LoggerUtility;
 import ObjectData.WebTableObject;
 import Pages.BasePage;
@@ -14,8 +15,11 @@ import java.util.List;
 
 public class WebTablePage extends BasePage {
 
+    private WebTable webTable;
+
     public WebTablePage(WebDriver driver) {
         super(driver);
+        webTable = new WebTable();
     }
 
     @FindBy(xpath = "//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']")
@@ -51,18 +55,6 @@ public class WebTablePage extends BasePage {
 
         Integer actualtablesize = actualEntries.size();
 
-
-        //elementMethods.clickElement(add);
-        // add.click();
-        //firstname.sendKeys(firstnamevalue);
-        //lastname.sendKeys(lastnamevalue);
-        //email.sendKeys(emailvalue);
-        //age.sendKeys(agevalue);
-        //salary.sendKeys(salaryvalue);
-        //department.sendKeys(departmentvalue);
-        //submit.click();
-
-
         elementMethods.clickJsElement(add);
         LoggerUtility.info("The user clicks on the add button");
 
@@ -89,6 +81,10 @@ public class WebTablePage extends BasePage {
 
         validateNewEntry(actualtablesize, webTableObject);
 
+        // Inseram datele din UI in baza noastra de date:
+
+        webTable.insertWebTableData(webTableObject);
+        LoggerUtility.info("All the testing data were inserted into Webtable with success");
     }
 
     private void validateNewEntry(Integer actualtablesize, WebTableObject webTableObject){

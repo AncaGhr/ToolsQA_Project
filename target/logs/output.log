@@ -49,18 +49,22 @@ Element: [[ChromeDriver: chrome on windows (8c3cafcc5291e76ea682c717be04bbae)] -
 Session ID: 8c3cafcc5291e76ea682c717be04bbae
 [2024-02-03T22:22:17,108][INFO ][main] =========================== Test failed: ===========================
 Contents of file WebTableTest.log
-[2024-02-03T21:07:54,663][INFO ][main] =========================== Execution started : WebTableTest===========================
-[2024-02-03T21:07:57,990][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
-[2024-02-03T21:07:59,185][ERROR][main] main : ShareData.Hooks : clearEnvironment ==>  element click intercepted: Element <h5>...</h5> is not clickable at point (190, 227). Other element would receive the click: <div class="fc-dialog-overlay"></div>
-  (Session info: chrome=121.0.6167.140)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.22'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f4159097a7610058dad1641fb8ccae11, clickElement {id=7C683714C1E890DAD624FACDBEBDF444_element_337}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\Anca\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:11613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:11613/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f4159097a7610058dad1641fb8ccae11)] -> xpath: //h5[text()='Elements']]
-Session ID: f4159097a7610058dad1641fb8ccae11
-[2024-02-03T21:07:59,186][INFO ][main] =========================== Test failed: ===========================
+[2024-02-29T19:40:48,436][INFO ][main] =========================== Execution started : WebTableTest===========================
+[2024-02-29T19:40:54,644][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
+[2024-02-29T19:40:54,904][INFO ][main] main : Pages.HomePage : clickConsent ==>  The user clicks on Consent button
+[2024-02-29T19:40:55,695][INFO ][main] main : Pages.HomePage : clickElements ==>  The user clicks on Elements button
+[2024-02-29T19:40:57,225][INFO ][main] main : Pages.Elements.ElementsPage : clickWebTables ==>  The user clicks on webtables element
+[2024-02-29T19:40:58,279][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user clicks on the add button
+[2024-02-29T19:40:58,688][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills firstname field[[ChromeDriver: chrome on windows (d64af6fe2e49acf1ac3606860f551152)] -> id: firstName]
+[2024-02-29T19:40:58,816][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills lastname field[[ChromeDriver: chrome on windows (d64af6fe2e49acf1ac3606860f551152)] -> id: lastName]
+[2024-02-29T19:40:58,982][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills email field[[ChromeDriver: chrome on windows (d64af6fe2e49acf1ac3606860f551152)] -> id: userEmail]
+[2024-02-29T19:40:59,118][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills age field[[ChromeDriver: chrome on windows (d64af6fe2e49acf1ac3606860f551152)] -> id: age]
+[2024-02-29T19:40:59,294][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills salary field[[ChromeDriver: chrome on windows (d64af6fe2e49acf1ac3606860f551152)] -> id: salary]
+[2024-02-29T19:40:59,447][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user fills department field[[ChromeDriver: chrome on windows (d64af6fe2e49acf1ac3606860f551152)] -> id: department]
+[2024-02-29T19:40:59,720][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  The user clicks on submit button
+[2024-02-29T19:40:59,988][INFO ][main] main : Pages.Elements.WebTablePage : addNewEntry ==>  All the testing data were inserted into Webtable with success
+[2024-02-29T19:41:00,297][INFO ][main] main : ShareData.ShareData : clear ==>  The browser was closed with succes
+[2024-02-29T19:41:00,299][INFO ][main] =========================== Execution finished : WebTableTest===========================
 Contents of file WindowTest.log
 [2024-01-23T18:46:28,130][INFO ][main] =========================== Execution started : WindowTest===========================
 [2024-01-23T18:46:32,003][INFO ][main] main : ShareData.Browser.ChromeBrowserService : openBrowser ==>  The browser was opened with success
